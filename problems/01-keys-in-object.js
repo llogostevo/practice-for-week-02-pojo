@@ -14,16 +14,16 @@ keysInObject(foods); // => ["apple", "lemon", "mango"]
 
 function keysInObject(obj) {
   // Your code here
+  //set empty  array
   let keys = [];
+  //cycle through each key in object
   for (const key in obj){
+    // push(append) to the array on each passing of for loop
     keys.push(key);
   } 
+  // return all the keys
   return keys;
 }
 
-let animals = {dog: 'Wolfie', cat: 'Jet', bison: 'Bilbo'}
-let foods = {apple: 'tart', lemon: 'sour', mango: 'sweet'}
-keysInObject(animals); // => ["dog", "cat", "bison"]
-keysInObject(foods); // => ["apple", "lemon", "mango"]
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keysInObject;
