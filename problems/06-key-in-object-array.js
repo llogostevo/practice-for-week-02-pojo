@@ -18,10 +18,38 @@ keyInObjectArray(objArray, 'food'); // => false
 keyInObjectArray(objArray, 'animal'); // => false
 
 ***********************************************************************/
+function doesKeyExist(obj, key) {
+  for (attr in obj){
+    if (attr == key){
+      // if key is found can return true and leave the loop
+      return true;
+    } 
+  }
+  // if key isn't found then this point will be reached and false returned. 
+  return false;
+}
 
 function keyInObjectArray(objArray, keyString) {
-  // Your code here
+  // for of iterates the values, for in itereates the keys
+  for (obj of objArray){
+    if (doesKeyExist(obj, keyString)){
+      return true;
+    }
+  }
+  return false;
 }
+
+let objArray = [
+  { name: "Rupert" },
+  { age: 42 },
+  { planet: "Earth", system: "Milky Way" }
+];
+
+keyInObjectArray(objArray, 'planet'); // => true
+keyInObjectArray(objArray, 'age'); // => true
+keyInObjectArray(objArray, 'food'); // => false
+keyInObjectArray(objArray, 'animal'); // => false
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keyInObjectArray;
