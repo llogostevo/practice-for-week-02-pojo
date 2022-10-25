@@ -27,15 +27,6 @@ let peeps = [
 console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 ***********************************************************************/
 
-
-function matchKey(obj, searchKey){
-  for (let key in obj){
-    if (key == searchKey){
-      return true;
-    }
-  } return false;
-}
-
 function countScores(people) {
   // Your code here
   let scores = {};
