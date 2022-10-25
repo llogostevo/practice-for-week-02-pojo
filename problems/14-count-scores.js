@@ -29,18 +29,27 @@ console.log(countScores(peeps)); //=> { Anthony: 4, Fred: 4, Winnie: 6 }
 
 function countScores(people) {
   // Your code here
+  // set empty object to track score
   let scores = {};
+
+  //loop through outter array that contain the score objects
   for(let person in people){
+    // check if the name of the current object is in the scores object
     if (!(people[person].name in scores)){
+      // if not in scores object, then add the name as a key and its value set at 0
       scores[people[person].name]=0;
     }
   }
 
+  //loop through outer array that contains the score objects
   for(person in people){
+    // check if the name of the current object is in the scores object
     if ((people[person].name in scores)){
+      // if in scores object then add the current value in the score to the value in the current score
       scores[people[person].name]=scores[people[person].name]+people[person].score;
     }
   }
+  // return the final total scores object
   return scores;
 }
 
