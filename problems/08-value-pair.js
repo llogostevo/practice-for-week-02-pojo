@@ -22,12 +22,14 @@ function breakDownObj(obj, key) {
 }
 
 function valuePair(obj1, obj2, key) {
-  // set an array that will be the result of object one breakdown
-  let result = breakDownObj(obj1, key);
-  // use hte result of object one breakdown to then join with object2s breakdown
-  // as the breakdown obj is an array then use the spread syntax to append them together in the new array ...
-  result = [...result, ...breakDownObj(obj2, key)]
-  return result;
+  /* function returns the result of the two function calls
+  these are both put into a new array
+  as the funciton returns an array then the use of spread ... 
+  will put all the elements from the results of these two functions into a new array 
+  with each element as an individual element in the array  
+  
+  */
+  return [...breakDownObj(obj1, key), ...breakDownObj(obj2, key)];
 
 }
 
