@@ -11,7 +11,7 @@ valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
 ***********************************************************************/
 
 function breakDownObj(obj, key) {
-  // set an empty array, then use the spread syntax to append the key to the new array on each passing. 
+  // set an empty array, then use the spread syntax to append the key value to the new array on each passing. 
   let values = [];
   for (const objKey in obj){
     if (objKey === key){
@@ -27,7 +27,7 @@ function valuePair(obj1, obj2, key) {
   as the funciton returns an array then the use of spread ... 
   will put all the elements from the results of these two functions into a new array 
   with each element as an individual element in the array  
-  
+
   */
   return [...breakDownObj(obj1, key), ...breakDownObj(obj2, key)];
 
