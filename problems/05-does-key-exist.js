@@ -11,7 +11,14 @@ doesKeyExist(obj1, 'name'); // => false
 ***********************************************************************/
 
 function doesKeyExist(obj, key) {
-  // Your code here
+  for (attr in obj){
+    if (attr == key){
+      // if key is found can return true and leave the loop
+      return true;
+    } 
+  }
+  // if key isn't found then this point will be reached and false returned. 
+  return false;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
