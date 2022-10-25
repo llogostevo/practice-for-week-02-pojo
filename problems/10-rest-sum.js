@@ -10,7 +10,14 @@ restSum(0); // => 0
 ***********************************************************************/
 
 function restSum(...otherNums) {
-  // Your code here
+ // initialise total at zero
+  let total = 0;
+  // cycle through the array of otherNums using for in loop
+  for (number of otherNums){
+    // for each number within otherNums, add to total
+    total = total+number;
+  }
+  return total;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
